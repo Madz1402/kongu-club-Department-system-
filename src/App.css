@@ -1,0 +1,147 @@
+.header {
+  width: 100vw; /* Full browser width */
+  height: 200px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(26, 22, 69); /* Optional: Helps with any transparency */
+}
+
+.header-image {
+  width: 400%; /* Full width */
+  height: 150%; /* Full height */
+  object-fit: contain; /* Prevents cropping */
+  display: block;
+}
+
+
+
+.navbar {
+  background-color: rgb(133, 21, 133);
+  padding: 10px 0;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  display: flex; /* Ensure the navbar is a flex container */
+  justify-content: center; /* Center the navbar items */
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Ensure the list items are aligned horizontally */
+  justify-content: center; /* Center the list items horizontally */
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #6afe65;
+  color: rgb(17, 3, 3);
+}
+
+/* Modal Popup Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff; /* White background */
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 450px;
+  max-height: 80vh;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: none; /* Minimal border */
+}
+
+/* Modal Header: Event Icon, Description & Close Button */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.event-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.event-description {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+@media (max-width: 768px) {
+  body {
+    position: fixed; /* Prevent movement */
+    overflow: hidden; /* Stop scrolling */
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.close-btn:hover {
+  color: #ff5722;
+}
+
+/* Event Brochure Image */
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.social-icons {
+  display: flex;
+  gap: 20px;  /* Increase the gap between icons */
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-flex;  /* Ensures proper spacing */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;  /* Adds some padding around each icon */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+} 

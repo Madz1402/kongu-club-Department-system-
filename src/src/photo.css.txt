@@ -1,0 +1,376 @@
+/* General Page Styling */
+.sdc-page {
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e6ea);
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.sdc-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Mission & Vision Section */
+.sdc-mission, .sdc-vision {
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f3f7);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+}
+/* Hover Effect */
+.sdc-mission:hover, .sdc-vision:hover {
+  transform: scale(1.02);
+}
+
+/* Ripple Animation */
+.sdc-mission::before, .sdc-vision::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2) 10%, transparent 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.sdc-mission:hover::before, .sdc-vision:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+/* Title Styling */
+.sdc-mission h2, .sdc-vision h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+}
+/* Content Styling */
+.sdc-mission p, .sdc-vision p {
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+}
+/* Member Details Section - Using Grid */
+.sdc-members-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 30px; /* Spacing between the cards */
+  margin-top: 20px;
+  padding: 0 20px; /* Optional: Adds padding around the container */
+}
+
+.sdc-member-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1500px;
+}
+
+.sdc-member-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Front Side (Position Only) */
+.sdc-member-card-front,
+.sdc-member-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sdc-member-card-front {
+  background: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Back Side (Member Details) */
+.sdc-member-card-back {
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* New Flexbox container for image and content */
+.sdc-member-card-back .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align content */
+  justify-content: flex-start; /* Align text to top */
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Ensuring the image stays centered */
+.sdc-member-card-back img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Left-aligning text content under the image */
+.sdc-member-card-back p {
+  text-align: left;
+}
+
+/* Hover Effect */
+.sdc-member-card:hover .sdc-member-card-back {
+  transform: scaleX(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sdc-mission, .sdc-vision {
+    width: 80%;
+  }
+
+  .sdc-members-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sdc-members-container {
+    grid-template-columns: 1fr; /* 1 card per row on very small screens */
+  }
+}
+/* General Page Styling */
+.sdc-page {
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa, #e3e6ea);
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.sdc-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Mission & Vision Section */
+.sdc-mission, .sdc-vision {
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f3f7);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+}
+/* Hover Effect */
+.sdc-mission:hover, .sdc-vision:hover {
+  transform: scale(1.02);
+}
+
+/* Ripple Animation */
+.sdc-mission::before, .sdc-vision::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2) 10%, transparent 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.sdc-mission:hover::before, .sdc-vision:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+/* Title Styling */
+.sdc-mission h2, .sdc-vision h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+}
+/* Content Styling */
+.sdc-mission p, .sdc-vision p {
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+}
+/* Member Details Section - Using Grid */
+.sdc-members-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 30px; /* Spacing between the cards */
+  margin-top: 20px;
+  padding: 0 20px; /* Optional: Adds padding around the container */
+}
+
+.sdc-member-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1500px;
+}
+
+.sdc-member-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Front Side (Position Only) */
+.sdc-member-card-front,
+.sdc-member-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sdc-member-card-front {
+  background: #007bff;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Back Side (Member Details) */
+.sdc-member-card-back {
+  background: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* New Flexbox container for image and content */
+.sdc-member-card-back .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left-align content */
+  justify-content: flex-start; /* Align text to top */
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Ensuring the image stays centered */
+.sdc-member-card-back img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Left-aligning text content under the image */
+.sdc-member-card-back p {
+  text-align: left;
+}
+
+/* Hover Effect */
+.sdc-member-card:hover .sdc-member-card-back {
+  transform: scaleX(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sdc-mission, .sdc-vision {
+    width: 80%;
+  }
+
+  .sdc-members-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sdc-members-container {
+    grid-template-columns: 1fr; /* 1 card per row on very small screens */
+  }
+}
+
+/* Slideshow Styling */
+.slideshow-section {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.slideshow img {
+  object-fit: cover;
+  height: 400px;
+}
+
+/* Event Modal */
+.modal-body p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.modal-header {
+  background: #007bff;
+  color: white;
+}
+
+.modal-footer {
+  justify-content: space-between;
+}

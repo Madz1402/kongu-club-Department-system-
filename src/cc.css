@@ -1,0 +1,196 @@
+/* General Page Styling */
+.cc-page {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Clubs & Cells Section */
+.clubs-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Added to position the button relative to the section */
+}
+
+/* Clubs Header */
+.clubs-header {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Vertically centers the content */
+  margin-bottom: 30px; /* Add some spacing below the title */
+}
+
+/* Clubs Title */
+.clubs-title {
+  font-size: 2rem;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Clubs Container */
+.clubs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Club Card */
+.club-card {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 450px;
+  background: #fff;
+  transition: transform 0.4s ease, box-shadow 0.3s ease, background 0.4s ease, border 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Club Card - Neon Glow on Hover */
+.club-card:hover {
+  transform: scale(1.05);
+  border: 3px solid rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  background: linear-gradient(to right, #e0f2ff, #b3e0ff, #a3d8ff);
+}
+
+/* Club Image */
+.club-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Club Image Hover Effect */
+.club-card:hover img {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.1);
+}
+
+/* Club Name */
+.club-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Club Name Hover Effect */
+.club-card:hover .club-name {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Floating Effect */
+.club-card:hover {
+  animation: floatUpDown 1.5s infinite ease-in-out;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Overlay Text Reveal */
+.club-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(20px);
+}
+
+/* Reveal Description on Hover */
+.club-card:hover .club-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Flip Card Effect */
+.club-card {
+  perspective: 1000px;
+}
+
+.club-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.club-card:hover .club-inner {
+  transform: rotateY(180deg);
+}
+
+.club-front, .club-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.club-back {
+  background: #007bff;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.club-image {
+  width: 1470px;
+}
+
+/* Slideshow Title */
+.slideshow-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a90303;
+}
+
+/* Register Button */
+.register-button {
+  position: absolute;
+  top: 20px; /* Positions the button 20px from the top */
+  right: 20px; /* Positions the button 20px from the right */
+  width: 200px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+.register-button:active {
+  background-color: #00408a;
+}

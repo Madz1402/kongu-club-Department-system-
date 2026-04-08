@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-20 {
+  padding: 5rem 0;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Hero Section */
+.relative {
+  position: relative;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-white {
+  color: rgb(0, 0, 0);
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #3182ce;
+}
+
+/* Gallery Section */
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+/* Clubs & Cells Section */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overflow-x-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.space-x-4 > * {
+  margin-right: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Contact Section */
+.md\:flex-row {
+  display: flex;
+}
+
+.md\:w-1\/2 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+/* Reviews Section */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.md\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.text-yellow-500 {
+  color: #ecc94b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .md\:flex-row {
+    flex-direction: column;
+  }
+
+  .md\:w-1\/2 {
+    width: 100%;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

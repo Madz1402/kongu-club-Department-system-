@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 50px;
+    color: #04285e;
+    font-weight: bold;
+}
+
+/* Course container grid */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Small cards */
+    gap: 60px; /* Increased gap between cards */
+    padding: 50px 20px 20px; /* Adds space above the grid */
+    justify-items: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers the cards vertically */
+}
+
+/* Individual card container */
+.container {
+    position: relative;
+    width: 220px; /* Smaller card width */
+    height: 280px; /* Adjusted height of card to fit smaller content box */
+    background:rgb(12, 12, 88);
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-8px); /* Slight lift effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+/* Image container */
+.imageBox {
+    width: 100%;
+    height: 60%; /* Increased image box height */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Keeps the image at the front */
+}
+
+.container .imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+/* Content container */
+.content {
+    width: 100%;
+    height: 40%; /* Smaller content box height */
+    position: absolute;
+    bottom: 0;
+    background: white; /* Default white background before transition */
+    padding: 10px;
+    box-sizing: border-box;
+    transform-origin: left;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: perspective(600px) rotateY(90deg);
+    opacity: 0; /* Start with hidden content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    margin: 8px 0;
+    padding: 0;
+    color: #000;
+    font-size: 20px; /* Adjusted font size for smaller cards */
+}
+
+.content p {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 12px; /* Adjusted font size */
+    text-align: center;
+}
+
+/* Download button styling */
+.download-btn {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect for content */
+.container:hover .content {
+    transform: perspective(600px) rotateY(0deg);
+    opacity: 1; /* Reveal content when hovering */
+}
+
+/* Image stability on hover */
+.container:hover .imageBox {
+    /* Image no longer moves */
+    transform: none;
+}

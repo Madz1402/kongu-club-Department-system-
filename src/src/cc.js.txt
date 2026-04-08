@@ -1,0 +1,80 @@
+import React, { useState } from 'react';
+import './cc.css'; // CSS for styling
+import Cell from './assets/club.png'; // Updated image path
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap styles
+import { useNavigate } from 'react-router-dom'; // React Router for navigation
+
+import c1 from './assets/club.png';
+import c2 from './assets/club.png';
+import c3 from './assets/club.png';
+import sdc from './assets/sdc.png';
+import p from './assets/p.png';
+import cm from './assets/cm.png';
+import r from './assets/r.png';
+import t from './assets/t.png';
+import w from './assets/w.png';
+import tp from './assets/tp.png';
+import edc from './assets/edc.png';
+
+const clubs = [
+  {
+    image: c1,
+    title: 'Advanced Programming Techniques',
+    description: 'Learn in-depth programming skills and system design principles.',
+  },
+  {
+    image: c2,
+    title: 'Real-World Projects',
+    description: 'Engage in hands-on projects to build real-world applications.',
+  },
+  {
+    image: c3,
+    title: 'Industry Exposure',
+    description: 'Get opportunities to interact with industry experts and gain insights.',
+  },
+];
+
+const clubsAndCells = [
+  { image: sdc, name: 'Student Development Club', path: '/student-development-club' },
+  { image: p, name: 'Photography Club', path: '/photo-club' },
+  { image: cm, name: 'Cultural and Music Club', path: '/music-club' },
+  { image: r, name: 'Rotaract Club', path: '/rotaract-club' },
+  { image: t, name: 'Zhagaram Tamil mandram', path: '/tamil-club' },
+  { image: w, name: 'Women Development Cell', path: '/women-cell' },
+  { image: tp, name: 'Placement Cell', path: '/placement-cell' },
+  { image: edc, name: 'Entrepreneurship Development Cell', path: '/development-cell' },
+];
+
+const CC = () => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleClubClick = (path) => {
+    navigate(path); // Navigate to the specified path
+  };
+
+  return (
+    <div className="cc-page">
+      <img src={Cell} alt="MSC Block" className="club-image" />
+
+
+      {/* Clubs and Cells Section */}
+      <div className="clubs-section">
+        <h2 className="clubs-title">Clubs & Cells</h2>
+        <div className="clubs-container">
+          {clubsAndCells.map((item, index) => (
+            <div
+              key={index}
+              className="club-card"
+              onClick={() => handleClubClick(item.path)} // Navigate on click
+            >
+              <img src={item.image} alt={item.name} className="clib-image" />
+              <h3 className="club-name">{item.name}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CC;

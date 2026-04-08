@@ -1,53 +1,164 @@
-# Getting Started with Create React App
+# Kongu Club Department System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for managing and displaying information about various departments and clubs at Kongu Engineering College. Built using React with a responsive and user-friendly interface.
+
+## Features
+
+- Interactive homepage with navigation
+- Department pages for Computer Science, Music, Photography, Tamil, Women Empowerment, Rotaract, and others
+- Course management with semester selection
+- Gallery for department activities
+- Contact information system
+- Responsive design for different devices
+- Modern user interface using Bootstrap and Tailwind CSS
+- Smooth animations with Framer Motion
+
+## Live Demo
+
+The application is deployed at: https://Madz1402.github.io/kongu-club-Department-system-
+
+## Technologies Used
+
+- React 19
+- React Router DOM
+- Bootstrap 5.3
+- Tailwind CSS 4.0
+- Framer Motion
+- Lucide React
+- React Icons
+- @react-pdf-viewer
+- Create React App
+- GitHub Pages for deployment
+
+## Prerequisites
+
+- Node.js (version 16 or higher)
+- npm package manager
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/Madz1402/kongu-club-Department-system-.git
+   cd kongu-club-Department-system-
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm start
+   ```
+
+4. Open http://localhost:3000 in your browser to view the application.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run deploy` - Deploys to GitHub Pages
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/
+│   ├── Homepage.js
+│   ├── LoginForm.js
+│   ├── Courses.js
+│   ├── Departments.js
+│   ├── Gallery.js
+│   ├── ContactUs.js
+│   ├── SemesterSelection.js
+│   └── department-specific/
+│       ├── cc.js
+│       ├── music.js
+│       ├── photo.js
+│       ├── tamil.js
+│       ├── women.js
+│       ├── rotaract.js
+│       └── student.js
+├── styles/
+│   ├── App.css
+│   ├── index.css
+│   └── component-specific CSS files
+├── assets/
+└── App.js
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Key Components
 
-### `npm test`
+### Homepage
+- Main landing page with college information
+- Navigation menu
+- Featured departments
+- Quick links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Department Pages
+Each department page contains:
+- Department description
+- Faculty details
+- Activities information
+- Contact details
+- Gallery links
 
-### `npm run build`
+### Course Management
+- Course listings by semester
+- Department-wise curriculum
+- Course selection interface
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application is set up for GitHub Pages deployment:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Build the project:
+   ```
+   npm run build
+   ```
 
-### `npm run eject`
+2. Deploy to GitHub Pages:
+   ```
+   npm run deploy
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will build the project and push it to the gh-pages branch.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions are welcome. Please follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Commit your changes
+5. Push to your branch
+6. Open a Pull Request
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
 
-### Code Splitting
+- Madhumitha - Initial development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgments
+
+- Kongu Engineering College
+- React community
+- Bootstrap and Tailwind CSS teams
+- All contributors
+
+## Contact
+
+For questions or support:
+- GitHub: https://github.com/Madz1402/kongu-club-Department-system-
+
+Made for Kongu Engineering College
 
 ### Analyzing the Bundle Size
 
